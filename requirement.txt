@@ -1,0 +1,5 @@
+fastapi[standard]
+typing
+sqlalchemy
+pymysql
+python-dotenv
