@@ -6,6 +6,6 @@ import os
 
 load_dotenv()
 DB_URL = os.getenv("DB_URL")
-engine = create_engine(DB_URL, echo=True)
+engine = create_engine(DB_URL,connect_args={"connect_timeout": 10}, echo=True)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base = declarative_base()
